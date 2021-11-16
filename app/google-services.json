@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753905131098",
+    "project_id": "futurepredtoday-a31c1",
+    "storage_bucket": "futurepredtoday-a31c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753905131098:android:4907790892db19c8370263",
+        "android_client_info": {
+          "package_name": "com.techjinny.futurepredtoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753905131098-klqapnlle3i8r3cajti2dval3o8heqls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADoK39YuqWOPnQRuuxMCeIxrrAT3A8CUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753905131098-klqapnlle3i8r3cajti2dval3o8heqls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

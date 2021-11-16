@@ -2,7 +2,7 @@ package com.techjinny.futurepredtoday.messages;
 
 import androidx.dynamicanimation.animation.SpringAnimation;
 
-public class MessagesList {
+public class  MessagesList {
 
     private String name, mobile, lastMessage,profilePic;
 
@@ -49,9 +49,6 @@ public class MessagesList {
         return profilePic;
     }
 
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
-    }
 
     public void setUnseenMesssage(String unseenMesssage) {
         this.unseenMesssage = unseenMesssage;

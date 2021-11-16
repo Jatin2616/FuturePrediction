@@ -18,26 +18,27 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:padding="6dp"
             android:background="@drawable/round_back_light_10"
             android:src="@drawable/search_icon" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Messae"
-            android:textColor="#424242"
-            android:textStyle="bold"
             android:layout_centerInParent="true"
-            android:textSize="18sp"/>
+            android:text="Messages"
+            android:textColor="#424242"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userProfilePic"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/user" />
 
     </RelativeLayout>

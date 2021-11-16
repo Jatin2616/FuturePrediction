@@ -32,7 +32,6 @@ public class Register extends AppCompatActivity {
         final EditText email= findViewById(R.id.r_email);
         final Button register= findViewById(R.id.r_registerBtn);
 
-
         ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("loading...");

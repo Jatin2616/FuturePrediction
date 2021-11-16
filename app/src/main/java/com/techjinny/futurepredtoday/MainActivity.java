@@ -37,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
         final CircleImageView userProfilePic = findViewById(R.id.userProfilePic);
 
         messageRecyclerView = findViewById(R.id.messagesRecyclerView);
+
+        //get intent data from Register class activity
         mobile = getIntent().getStringExtra("mobile");
         email = getIntent().getStringExtra("email");
         name = getIntent().getStringExtra("name");
+
         messageRecyclerView.setHasFixedSize(true);
         messageRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -52,10 +55,15 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 final String profilePicUrl = snapshot.child("users").child(mobile).child("profile_pic").getValue(String.class);
 
-                //set profoile pic to circle image view
-                Picasso.get().load(profilePicUrl).into(userProfilePic);
+                // set profile pic to circle image viewv
+                    if(!profilePicUrl.isEmpty()){
+                        //set profoile pic to circle image view
+                        Picasso.get().load(profilePicUrl).into(userProfilePic);
+                    }
+
                 progressDialog.dismiss();
             }
 

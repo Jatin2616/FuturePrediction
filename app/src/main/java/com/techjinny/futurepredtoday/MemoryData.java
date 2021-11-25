@@ -22,6 +22,16 @@ public final class MemoryData {
         }
     }
 
+    public static void saveLastMsgTS(String data, String chatId, Context context) throws IOException {
+        try{
+            FileOutputStream fileOutputStream = context.openFileOutput(chatId+".txt", Context.MODE_PRIVATE);
+            fileOutputStream.write(data.getBytes());
+            fileOutputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void saveName(String data, Context context) throws IOException {
         try{
             FileOutputStream fileOutputStream = context.openFileOutput("nameee.txt", Context.MODE_PRIVATE);
@@ -71,8 +81,26 @@ public final class MemoryData {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return data;
     }
 
+    public static String getLastMsgTs(Context context, String chatId){
+        String data="0";
+        try{
+            FileInputStream fis = context.openFileInput(chatId+".txt");
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader bufferedReader = new BufferedReader(isr);
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while((line =  bufferedReader.readLine()) != null){
+                sb.append(line);
+            }
+            data =  sb.toString();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
 }

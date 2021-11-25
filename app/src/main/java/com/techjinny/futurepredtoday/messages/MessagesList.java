@@ -6,10 +6,10 @@ public class  MessagesList {
 
     private String name, mobile, lastMessage,profilePic;
 
-    private String unseenMesssage;
+    private int unseenMesssage;
 
 
-    public MessagesList(String name, String mobile, String lastMessage,String profilePic, String unseenMesssage) {
+    public MessagesList(String name, String mobile, String lastMessage,String profilePic, int unseenMesssage) {
         this.name = name;
         this.mobile = mobile;
         this.lastMessage = lastMessage;
@@ -41,7 +41,7 @@ public class  MessagesList {
         this.lastMessage = lastMessage;
     }
 
-    public String getUnseenMesssage() {
+    public int getUnseenMesssage() {
         return unseenMesssage;
     }
 
@@ -50,7 +50,7 @@ public class  MessagesList {
     }
 
 
-    public void setUnseenMesssage(String unseenMesssage) {
+    public void setUnseenMesssage(int unseenMesssage) {
         this.unseenMesssage = unseenMesssage;
     }
 }

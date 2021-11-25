@@ -87,7 +87,7 @@ public class Register extends AppCompatActivity {
 
                             Intent intent  =  new Intent(Register.this, MainActivity.class);
                             intent.putExtra("mobile",mobileTxt);
-                            intent.putExtra("name",nameTxt);
+                            intent.putExtra(".",nameTxt);
                             intent.putExtra("email",emailTxt);
                             startActivity(intent);
                             finish();
